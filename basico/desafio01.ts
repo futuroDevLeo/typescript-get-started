@@ -39,3 +39,24 @@ funcionario = {
 }
 
 console.log(funcionario);
+
+
+// Outra forma mais simples de solucionar o desafio proposto
+
+let novoFuncionario: {
+    supervisores: string[],
+    baterPonto: (hora: number) => string
+} = {
+    supervisores: ["Ana", "Fernando"],
+    baterPonto(hora: number): string {
+        if (hora <= 8) {
+            return "Ponto normal"
+        } else {
+            return "Fora do horário"
+        }
+    }
+}
+
+console.log(novoFuncionario.supervisores);
+console.log(novoFuncionario.baterPonto(8));
+console.log(novoFuncionario.baterPonto(9));
