@@ -91,7 +91,7 @@ type Funcionario = {
     baterPonto: (hora: number) => string
 }
 
-let funcionario: Funcionario = {
+let funcionarioPedro: Funcionario = {
     supervisores: ["Fernanda", "Marcelo"],
     baterPonto(hora: number): string {
         if (hora <= 8) {
@@ -102,7 +102,7 @@ let funcionario: Funcionario = {
     }
 };
 
-console.log(funcionario.baterPonto(8));
+console.log(funcionarioPedro.baterPonto(8));
 
 
 // Union Types
