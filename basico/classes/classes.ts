@@ -35,3 +35,24 @@ console.log(aniversarioEsperto);
 const casamentoEsperto = new DataEsperta // Posso omitir os "()"
 casamentoEsperto.ano = 2017
 console.log(casamentoEsperto);
+
+
+// Métodos
+class NovoProduto {
+    constructor(
+        public nome: string,
+        public preco: number,
+        public desconto: number = 0
+    ) {
+    }
+    public resumo(): string {
+        return this.desconto > 0 ? `${this.nome} custa R$${this.preco / 100},00 (${this.desconto * 100}% off)`
+            : `${this.nome} custa R$${this.preco / 100},00`
+    }
+};
+
+const novoProduto1 = new NovoProduto('Abajur', 1000);
+const novoProduto2 = new NovoProduto('Espelho', 9900, 0.15);
+
+console.log(novoProduto1.resumo());
+console.log(novoProduto2.resumo());
